@@ -18,8 +18,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
   <!-- swiper css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
   <!-- custom font start  -->
   <link rel="stylesheet" href="./fonts/web-clash-display/css/clash-display.css" />
   <link rel="stylesheet" href="./css/style.min.css" />
@@ -123,8 +125,7 @@
           <li class="relative dropdown group transition-all">
             <button
               class="dropdown-toggle flex justify-center items-center transition-all cursor-pointer text-white text-base lg:text-lg font-medium leading-7 px-2 lg:px-4 py-1 gap-1 bg-slate-500 rounded-lg linkify"
-                data-href="./contactanos.html"
-              data-dropdown>
+              data-href="./contactanos.html" data-dropdown>
               Contáctanos
             </button>
             <div
@@ -411,56 +412,37 @@
     <!-- tecnologia end -->
 
     <!-- services start  -->
-    <section class="services py-12 md:py-15 lg:py-24">
-      <div class="relative w-full hidden lg:block">
+    <section
+      class="services py-12 md:py-15 lg:py-24 overflow-x-auto pl-4 sm:pl-8 xl:pl-16 2xl:pl-[calc((100vw-1216px)/2)]">
+      <div class="">
         <!-- Slider wrapper with only left container spacing -->
-        <div
-          class="overflow-x-hidden pl-4 sm:pl-8 lg:pl-16 2xl:pl-[calc((100vw-1216px)/2)] flex flex-col lg:flex-row items-start justify-between">
-          <!-- Swiper Container -->
-          <div class="flex flex-col lg:flex-row overflow-x-hidden gap-12 lg:gap-[72px]">
-            <!-- Optional container just for heading/alignment (not wrapping the slider) -->
-            <div class="flex flex-col items-start justify-between max-w-[500px] gap-6">
-              <div class="flex flex-col justify-between items-start lg:items-start gap-6 w-full">
+
+        <!-- Swiper Container -->
+        <div class="grid grid-cols-1 xl:grid-cols-12 gap-14">
+          <!-- Optional container just for heading/alignment (not wrapping the slider) -->
+          <div class="xl:col-span-4 col-span-1 xl:block flex flex-row">
+            <div
+              class="flex xl:flex-col md:flex-row flex-col justify-between items-start lg:items-start gap-6 w-full xl:pr-0 pr-4 sm:pr-8">
+              <!-- doc -->
+              <div class="flex flex-col items-start gap-6 w-full xl:max-w-[492px] max-w-[570px]">
                 <h2
                   class="text-basic-black text-[34px] md:text-4xl xl:text-5xl font-medium font-ClashDisplay leading-[46px] md:leading-[48px] xl:leading-[60px]">
                   Desarrollamos el software que realmente necesitas
                 </h2>
+                <p class="text-gray-dark text-base md:text-lg font-normal md:leading-7">
+                  Incluye desarrollo front-end, back-end y aplicaciones
+                  SaaS, garantizando seguridad, escalabilidad y una
+                  experiencia de usuario excepcional. Descubre cómo nuestras
+                  plataformas a medida optimizan procesos y generan valor
+                  para tus proyectos.
+                </p>
 
-                <!-- doc -->
-                <div class="flex flex-col items-start gap-6">
-                  <p class="text-gray-dark text-base md:text-lg font-normal md:leading-7 w-full lg:max-w-[492px]">
-                    Incluye desarrollo front-end, back-end y aplicaciones
-                    SaaS, garantizando seguridad, escalabilidad y una
-                    experiencia de usuario excepcional. Descubre cómo nuestras
-                    plataformas a medida optimizan procesos y generan valor
-                    para tus proyectos.
-                  </p>
-                  <!-- 👇 Custom Pagination Dots -->
-                  <div class="flex md:hidden lg:flex justify-start gap-4 items-center">
-                    <button
-                      class="swiperdev-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
-                        <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
 
-                    <button
-                      class="swiperdev-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
-                        <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="2" stroke-linecap="round"
-                          stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
               </div>
               <!-- 👇 Custom Pagination Dots -->
-              <div class="hidden md:flex lg:hidden justify-start gap-4 items-center">
+              <div class="flex justify-start gap-4 items-center">
                 <button
-                  class="swiperdev-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
+                  class="prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
                     <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round"
@@ -469,7 +451,7 @@
                 </button>
 
                 <button
-                  class="swiperdev-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
+                  class="next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                     class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
                     <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="2" stroke-linecap="round"
@@ -478,22 +460,61 @@
                 </button>
               </div>
             </div>
-            <div class="swiper devSwiper h-[674px] overflow-visible lg:pr-[calc((100vw-1216px)/2)] hidden md:block">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
 
-                <div class="swiper-slide h-full flex rounded-xl max-w-[300px] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden gap-6 flex flex-row justify-between items-start w-full">
+          </div>
+          <div class="max-w-full xl:col-span-8 col-span-1">
+            <div class="sliderWrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide ">
+                <div
+                  class="relative w-full rounded-xl p-6 text-white bg-light-green overflow-hidden gap-6 flex flex-row justify-between items-start h-[674px] ">
+                  <div class="space-y-6 z-1">
+                    <h4
+                      class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
+                      Desarrollo de aplicaciones personalizadas
+                    </h4>
+                    <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
+                      <li>Soluciones totalmente escalables</li>
+                      <li>Integradas con tus herramientas actuales</li>
+                      <li>Enfocadas en eficiencia y seguridad</li>
+                    </ul>
+                  </div>
+
+                  <div class="z-1">
+                    <a href="#"
+                      class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- img -->
+                  <div class="absolute bottom-0 left-1/2 translate-x-[-50%] w-[80%] md:w-[70%] z-1">
+                    <img src="./images/dev-phone-1.png" alt="" class="w-full h-auto" />
+                  </div>
+
+                  <!-- Optional background overlay -->
+                  <div class="absolute top-0 right-0 w-[70%] pointer-events-none z-0">
+                    <img src="./images/wireframe-dev-1.png" alt="" class="w-full h-auto" />
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="relative w-full rounded-xl p-6 text-white bg-light-green overflow-hidden flex flex-col items-start justify-end  h-[674px] ">
+                  <div class="gap-6 flex flex-row justify-between items-start w-full">
                     <div class="space-y-6 z-1">
                       <h4
                         class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                        Desarrollo de aplicaciones personalizadas
+                        Plataformas SaaS escalables
                       </h4>
                       <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                        <li>Soluciones totalmente escalables</li>
-                        <li>Integradas con tus herramientas actuales</li>
-                        <li>Enfocadas en eficiencia y seguridad</li>
+                        <li>Acceso remoto y disponibilidad 24/7</li>
+                        <li>Múltiples usuarios y roles gestionados</li>
+                        <li>Escalabilidad técnica y comercial</li>
                       </ul>
                     </div>
 
@@ -507,73 +528,80 @@
                         </svg>
                       </a>
                     </div>
-                    <!-- img -->
-                    <div class="absolute bottom-0 left-1/2 translate-x-[-50%] w-[80%] md:w-[70%] z-1">
-                      <img src="./images/dev-phone-1.png" alt="" class="w-full h-auto" />
-                    </div>
+                  </div>
+                  <!-- img -->
+                  <div class="absolute top-0 right-0 w-[80%] lg:w-[70%] z-1">
+                    <img src="./images/dev-phone-2.png" alt="" class="w-full h-auto" />
+                  </div>
 
-                    <!-- Optional background overlay -->
-                    <div class="absolute top-0 right-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-1.png" alt="" class="w-full h-auto" />
-                    </div>
+                  <!-- Optional background overlay -->
+                  <div class="absolute botton-0 left-0 w-[70%] pointer-events-none z-0">
+                    <img src="./images/wireframe-dev-2.png" alt="" class="w-full h-auto" />
                   </div>
                 </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide h-full flex rounded-xl max-w-[300px] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden flex flex-col items-start justify-end w-full">
-                    <div class="gap-6 flex flex-row justify-between items-start w-full">
-                      <div class="space-y-6 z-1">
-                        <h4
-                          class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                          Plataformas SaaS escalables
-                        </h4>
-                        <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                          <li>Acceso remoto y disponibilidad 24/7</li>
-                          <li>Múltiples usuarios y roles gestionados</li>
-                          <li>Escalabilidad técnica y comercial</li>
-                        </ul>
-                      </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="relative w-full rounded-xl p-6 text-white bg-light-green overflow-hidden gap-6 flex flex-row justify-between items-start h-[674px] ">
+                  <div class="space-y-6 z-1">
+                    <h4
+                      class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
+                      Desarrollo Back-End
+                    </h4>
+                    <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
+                      <li>
+                        Rendimiento estable incluso con alto volumen de
+                        datos
+                      </li>
+                      <li>Seguridad en operaciones críticas y acceso</li>
+                      <li>
+                        Integración eficiente con APIs y servicios externos
+                      </li>
+                    </ul>
+                  </div>
 
-                      <div class="z-1">
-                        <a href="#"
-                          class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- img -->
-                    <div class="absolute top-0 right-0 w-[80%] lg:w-[70%] z-1">
-                      <img src="./images/dev-phone-2.png" alt="" class="w-full h-auto" />
-                    </div>
+                  <div class="z-1">
+                    <a href="#"
+                      class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </a>
+                  </div>
+                  <!-- img -->
+                  <div class="absolute bottom-0 left-1/2 translate-x-[-50%] w-[80%] lg:w-[70%] z-1">
+                    <img src="./images/dev-phone-3.png" alt="" class="w-full h-auto" />
+                  </div>
 
-                    <!-- Optional background overlay -->
-                    <div class="absolute botton-0 left-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-2.png" alt="" class="w-full h-auto" />
-                    </div>
+                  <!-- Optional background overlay -->
+                  <div class="absolute top-0 right-0 w-[70%] pointer-events-none z-0">
+                    <img src="./images/wireframe-dev-1.png" alt="" class="w-full h-auto" />
                   </div>
                 </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide h-full flex rounded-xl max-w-[300px] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden gap-6 flex flex-row justify-between items-start w-full">
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div
+                  class="relative w-full rounded-xl p-6 text-white bg-light-green overflow-hidden flex flex-col items-start justify-end  h-[674px] ">
+                  <div class="gap-6 flex flex-row justify-between items-start w-full">
                     <div class="space-y-6 z-1">
                       <h4
                         class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                        Desarrollo Back-End
+                        Desarrollo Front-End
                       </h4>
                       <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
                         <li>
-                          Rendimiento estable incluso con alto volumen de
-                          datos
+                          Experiencia de usuario clara y fluida (UX/UI)
                         </li>
-                        <li>Seguridad en operaciones críticas y acceso</li>
                         <li>
-                          Integración eficiente con APIs y servicios externos
+                          Adaptabilidad total a móviles, tablets y
+                          escritorio
+                        </li>
+                        <li>
+                          Integración con APIs y sistemas en tiempo real
                         </li>
                       </ul>
                     </div>
@@ -588,61 +616,15 @@
                         </svg>
                       </a>
                     </div>
-                    <!-- img -->
-                    <div class="absolute bottom-0 left-1/2 translate-x-[-50%] w-[80%] lg:w-[70%] z-1">
-                      <img src="./images/dev-phone-3.png" alt="" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Optional background overlay -->
-                    <div class="absolute top-0 right-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-1.png" alt="" class="w-full h-auto" />
-                    </div>
                   </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide h-full flex rounded-xl max-w-[300px] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden flex flex-col items-start justify-end w-full">
-                    <div class="gap-6 flex flex-row justify-between items-start w-full">
-                      <div class="space-y-6 z-1">
-                        <h4
-                          class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                          Desarrollo Front-End
-                        </h4>
-                        <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                          <li>
-                            Experiencia de usuario clara y fluida (UX/UI)
-                          </li>
-                          <li>
-                            Adaptabilidad total a móviles, tablets y
-                            escritorio
-                          </li>
-                          <li>
-                            Integración con APIs y sistemas en tiempo real
-                          </li>
-                        </ul>
-                      </div>
+                  <!-- img -->
+                  <div class="absolute top-0 right-0 w-[80%] lg:w-[70%] z-1">
+                    <img src="./images/dev-phone-4.png" alt="" class="w-full h-auto" />
+                  </div>
 
-                      <div class="z-1">
-                        <a href="#"
-                          class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- img -->
-                    <div class="absolute top-0 right-0 w-[80%] lg:w-[70%] z-1">
-                      <img src="./images/dev-phone-4.png" alt="" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Optional background overlay -->
-                    <div class="absolute botton-0 left-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-2.png" alt="" class="w-full h-auto" />
-                    </div>
+                  <!-- Optional background overlay -->
+                  <div class="absolute botton-0 left-0 w-[70%] pointer-events-none z-0">
+                    <img src="./images/wireframe-dev-2.png" alt="" class="w-full h-auto" />
                   </div>
                 </div>
               </div>
@@ -650,246 +632,8 @@
           </div>
         </div>
       </div>
-      <!-- slider-mobile -->
-      <div class="block lg:hidden">
-        <div class="container flex flex-col md:flex-row items-start justify-between mb-12 gap-6">
-          <div class="flex flex-col justify-between items-start lg:items-start gap-6 w-full">
-            <h2
-              class="text-basic-black text-[34px] md:text-4xl xl:text-5xl font-medium font-ClashDisplay leading-[46px] md:leading-[48px] xl:leading-[60px]">
-              Desarrollamos el software que realmente necesitas
-            </h2>
 
-            <!-- doc -->
-            <div class="flex flex-col items-start gap-6">
-              <p class="text-gray-dark text-base md:text-lg font-normal md:leading-7 w-full lg:max-w-[492px]">
-                Incluye desarrollo front-end, back-end y aplicaciones SaaS,
-                garantizando seguridad, escalabilidad y una experiencia de
-                usuario excepcional. Descubre cómo nuestras plataformas a
-                medida optimizan procesos y generan valor para tus proyectos.
-              </p>
-              <!-- 👇 Custom Pagination Dots -->
-              <div class="flex md:hidden lg:flex justify-start gap-4 items-center">
-                <button
-                  class="swiperdev-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                    class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
-                    <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </button>
 
-                <button
-                  class="swiperdev-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                    class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
-                    <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="2" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- 👇 Custom Pagination Dots -->
-          <div class="hidden md:flex lg:hidden justify-start gap-4 items-center">
-            <button
-              class="swiperdev-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
-                <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-
-            <button
-              class="swiperdev-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
-                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="relative w-full">
-          <!-- Slider wrapper with only left container spacing -->
-          <div class="overflow-x-auto pl-4 sm:pl-8 lg:pl-16 2xl:pl-[calc((100vw-1216px)/2)]">
-            <!-- Swiper Container -->
-            <div class="swiper devSwiper h-[674px] overflow-visible lg:pr-[calc((100vw-1216px)/2)] hidden md:block">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-
-                <div
-                  class="swiper-slide h-full flex rounded-xl max-w-[calc(100%-63px)] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden gap-6 flex flex-row justify-between items-start w-full">
-                    <div class="space-y-6 z-1">
-                      <h4
-                        class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                        Desarrollo de aplicaciones personalizadas
-                      </h4>
-                      <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                        <li>Soluciones totalmente escalables</li>
-                        <li>Integradas con tus herramientas actuales</li>
-                        <li>Enfocadas en eficiencia y seguridad</li>
-                      </ul>
-                    </div>
-
-                    <div class="z-1">
-                      <a href="#"
-                        class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
-                          <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </a>
-                    </div>
-                    <!-- img -->
-                    <div class="absolute bottom-0 left-1/2 translate-x-[-50%] w-[80%] md:w-[70%] z-1">
-                      <img src="./images/dev-phone-1.png" alt="" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Optional background overlay -->
-                    <div class="absolute top-0 right-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-1.png" alt="" class="w-full h-auto" />
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 2 -->
-                <div
-                  class="swiper-slide h-full flex rounded-xl max-w-[calc(100%-63px)] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden flex flex-col items-start justify-end w-full">
-                    <div class="gap-6 flex flex-row justify-between items-start w-full">
-                      <div class="space-y-6 z-1">
-                        <h4
-                          class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                          Plataformas SaaS escalables
-                        </h4>
-                        <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                          <li>Acceso remoto y disponibilidad 24/7</li>
-                          <li>Múltiples usuarios y roles gestionados</li>
-                          <li>Escalabilidad técnica y comercial</li>
-                        </ul>
-                      </div>
-
-                      <div class="z-1">
-                        <a href="#"
-                          class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- img -->
-                    <div class="absolute top-0 right-0 w-[80%] lg:w-[70%] z-1">
-                      <img src="./images/dev-phone-2.png" alt="" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Optional background overlay -->
-                    <div class="absolute botton-0 left-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-2.png" alt="" class="w-full h-auto" />
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 3 -->
-                <div
-                  class="swiper-slide h-full flex rounded-xl max-w-[calc(100%-63px)] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden gap-6 flex flex-row justify-between items-start w-full">
-                    <div class="space-y-6 z-1">
-                      <h4
-                        class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                        Desarrollo Back-End
-                      </h4>
-                      <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                        <li>
-                          Rendimiento estable incluso con alto volumen de
-                          datos
-                        </li>
-                        <li>Seguridad en operaciones críticas y acceso</li>
-                        <li>
-                          Integración eficiente con APIs y servicios externos
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="z-1">
-                      <a href="#"
-                        class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                          class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
-                          <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </a>
-                    </div>
-                    <!-- img -->
-                    <div class="absolute bottom-0 left-1/2 translate-x-[-50%] w-[80%] lg:w-[70%] z-1">
-                      <img src="./images/dev-phone-3.png" alt="" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Optional background overlay -->
-                    <div class="absolute top-0 right-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-1.png" alt="" class="w-full h-auto" />
-                    </div>
-                  </div>
-                </div>
-                <!-- Slide 4 -->
-                <div
-                  class="swiper-slide h-full flex rounded-xl max-w-[calc(100%-63px)] md:max-w-[465px] w-full shrink-0">
-                  <div
-                    class="relative h-full w-full rounded-xl p-6 text-white bg-light-green overflow-hidden flex flex-col items-start justify-end w-full">
-                    <div class="gap-6 flex flex-row justify-between items-start w-full">
-                      <div class="space-y-6 z-1">
-                        <h4
-                          class="text-xl md:text-[22px] lg:text-2xl font-medium leading-[24px] md:leading-[30px] lg:leading-[36px] text-basic-black font-ClashDisplay">
-                          Desarrollo Front-End
-                        </h4>
-                        <ul class="space-y-1 lg:space-y-2 font-normal text-sm md:text-base text-gray-dark">
-                          <li>
-                            Experiencia de usuario clara y fluida (UX/UI)
-                          </li>
-                          <li>
-                            Adaptabilidad total a móviles, tablets y
-                            escritorio
-                          </li>
-                          <li>
-                            Integración con APIs y sistemas en tiempo real
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="z-1">
-                        <a href="#"
-                          class="w-12 h-12 flex items-center justify-center rounded-full text-accent-secondary bg-basic-white group ring-2 ring-basic-white hover:bg-transparent hover:ring-accent-secondary transition duration-300 ease-in-out">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            class="w-6 h-6 stroke-[#13547A] group-hover:stroke-accent-secondary transition">
-                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          </svg>
-                        </a>
-                      </div>
-                    </div>
-                    <!-- img -->
-                    <div class="absolute top-0 right-0 w-[80%] lg:w-[70%] z-1">
-                      <img src="./images/dev-phone-4.png" alt="" class="w-full h-auto" />
-                    </div>
-
-                    <!-- Optional background overlay -->
-                    <div class="absolute botton-0 left-0 w-[70%] pointer-events-none z-0">
-                      <img src="./images/wireframe-dev-2.png" alt="" class="w-full h-auto" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- services end -->
 
@@ -994,18 +738,18 @@
             <!-- 👇 Custom Pagination Dots -->
             <div class="flex md:hidden lg:flex justify-start gap-4 items-center mb-6">
               <button
-                class="frecuentes-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
+                class="fPrev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-[#13547A] transition">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                  class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
+                  class="w-6 h-6 stroke-[#284A70] group-hover:stroke-basic-white transition">
                   <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
               </button>
 
               <button
-                class="frecuentes-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
+                class="fNext cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-primary transition">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                  class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
+                  class="w-6 h-6 stroke-[#284A70] group-hover:stroke-basic-white transition">
                   <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
@@ -1016,17 +760,17 @@
         <!-- 👇 Custom Pagination Dots -->
         <div class="hidden md:flex lg:hidden justify-start gap-4 items-center">
           <button
-            class="frecuentes-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
+            class="frecuentes-prev cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-[#13547A] transition">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
+              class="w-6 h-6 stroke-[#284A70] group-hover:stroke-basic-white transition">
               <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
 
           <button
-            class="frecuentes-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-secondary transition">
+            class="frecuentes-next cursor-pointer group w-12 h-12 rounded-full border border-gray-medium flex items-center justify-center hover:bg-accent-primary transition">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              class="w-6 h-6 stroke-accent-secondary group-hover:stroke-basic-white transition">
+              class="w-6 h-6 stroke-[#284A70] group-hover:stroke-basic-white transition">
               <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
@@ -1035,18 +779,18 @@
       </div>
       <div class="relative w-full">
         <!-- Slider wrapper with only left container spacing -->
-        <div class="overflow-x-auto pl-4 sm:pl-8 lg:pl-16 2xl:pl-[calc((100vw-1216px)/2)]">
+        <div class="overflow-x-auto pl-4 sm:pl-8 xl:pl-16 2xl:pl-[calc((100vw-1216px)/2)]">
           <!-- Swiper Container -->
-          <div class="swiper frecuentesSwiper pl-4 pr-12 md:pl-8 md:pr-16 lg:pl-16 lg:pr-24 h-[584px] md:h-[686px]">
-            <div class="swiper-wrapper overflow-x-visible">
+          <div class="swiper frecuentesSwiper">
+            <div class="frecuentes-wrapper overflow-x-visible">
               <!-- Slide 1 -->
-              <div class="swiper-slide max-w-[calc(100%-80px)] sm:max-w-[372px] md:max-w-[420px] shrink-0 h-full">
+              <div class="slick-slide">
                 <div
-                  class="relative h-full w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light text-white overflow-hidden group/slider groupItemTwo">
+                  class="relative w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light hover:bg-accent-primary text-white overflow-hidden group/slider groupItemNew h-[520px] md:h-[686px]">
                   <!-- main -->
                   <div class="inline-block group-hover/slider:hidden transition-opacity duration-400 item1">
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-basic-black font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-basic-black font-ClashDisplay">
                       ¿Cómo saber qué solución es la adecuada para mi
                       organización?
                     </h4>
@@ -1060,7 +804,7 @@
                       <img src="./images/arrow-down-left.svg" alt="arrow-up-left" class="w-6 h-8 md:w-12 md:h-12" />
                     </div>
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-white font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-white font-ClashDisplay sm:block hidden">
                       ¿Cómo saber qué solución es la adecuada para mi
                       organización?
                     </h4>
@@ -1079,13 +823,13 @@
                 </div>
               </div>
               <!-- Slide 2 -->
-              <div class="swiper-slide max-w-[calc(100%-80px)] sm:max-w-[372px] md:max-w-[420px] shrink-0 h-full">
+              <div class="slick-slide">
                 <div
-                  class="relative h-full w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light text-white overflow-hidden group/slider groupItemTwo">
+                  class="relative w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light hover:bg-accent-primary text-white overflow-hidden group/slider groupItemNew h-[520px] md:h-[686px]">
                   <!-- main -->
                   <div class="inline-block group-hover/slider:hidden transition-opacity duration-400 item1">
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-basic-black font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-basic-black font-ClashDisplay">
                       ¿Cuál es el proceso para iniciar un proyecto con
                       ustedes?
                     </h4>
@@ -1099,7 +843,7 @@
                       <img src="./images/arrow-down-left.svg" alt="arrow-up-left" class="w-6 h-8 md:w-12 md:h-12" />
                     </div>
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-white font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-white font-ClashDisplay sm:block hidden">
                       ¿Cuál es el proceso para iniciar un proyecto con
                       ustedes?
                     </h4>
@@ -1118,13 +862,13 @@
                 </div>
               </div>
               <!-- Slide 3 -->
-              <div class="swiper-slide max-w-[calc(100%-80px)] sm:max-w-[372px] md:max-w-[420px] shrink-0 h-full">
+              <div class="slick-slide">
                 <div
-                  class="relative h-full w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light text-white overflow-hidden group/slider groupItemTwo">
+                  class="relative w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light hover:bg-accent-primary text-white overflow-hidden group/slider groupItemNew h-[520px] md:h-[686px]">
                   <!-- main -->
                   <div class="inline-block group-hover/slider:hidden transition-opacity duration-400 item1">
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-basic-black font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-basic-black font-ClashDisplay">
                       ¿Qué tipo de soporte ofrecen durante y después del
                       proyecto?
                     </h4>
@@ -1138,7 +882,7 @@
                       <img src="./images/arrow-down-left.svg" alt="arrow-up-left" class="w-6 h-8 md:w-12 md:h-12" />
                     </div>
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-white font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-white font-ClashDisplay sm:block hidden">
                       ¿Qué tipo de soporte ofrecen durante y después del
                       proyecto?
                     </h4>
@@ -1157,13 +901,13 @@
                 </div>
               </div>
               <!-- Slide 4 -->
-              <div class="swiper-slide max-w-[calc(100%-80px)] sm:max-w-[372px] md:max-w-[420px] shrink-0 h-full">
+              <div class="slick-slide">
                 <div
-                  class="relative h-full w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light text-white overflow-hidden group/slider groupItemTwo">
+                  class="relative w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light hover:bg-accent-primary text-white overflow-hidden group/slider groupItemNew h-[520px] md:h-[686px]">
                   <!-- main -->
                   <div class="inline-block group-hover/slider:hidden transition-opacity duration-400 item1">
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-basic-black font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-basic-black font-ClashDisplay">
                       ¿Hay costos adicionales por soporte o mantenimiento?
                     </h4>
                     <div class="absolute top-6 right-6">
@@ -1176,7 +920,7 @@
                       <img src="./images/arrow-down-left.svg" alt="arrow-up-left" class="w-6 h-8 md:w-12 md:h-12" />
                     </div>
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-white font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-white font-ClashDisplay sm:block hidden">
                       ¿Hay costos adicionales por soporte o mantenimiento?
                     </h4>
                     <p class="font-normal text-sm md:text-base text-basic-white leading-5 md:leading-6 pt-6">
@@ -1194,13 +938,13 @@
                 </div>
               </div>
               <!-- Slide 5 -->
-              <div class="swiper-slide max-w-[calc(100%-80px)] sm:max-w-[372px] md:max-w-[420px] shrink-0 h-full">
+              <div class="slick-slide">
                 <div
-                  class="relative h-full w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light text-white overflow-hidden group/slider groupItemTwo">
+                  class="relative w-full flex flex-col justify-end items-start rounded-xl p-6 bg-gray-light hover:bg-accent-primary text-white overflow-hidden group/slider groupItemNew h-[520px] md:h-[686px]">
                   <!-- main -->
                   <div class="inline-block group-hover/slider:hidden transition-opacity duration-400 item1">
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-basic-black font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-basic-black font-ClashDisplay">
                       ¿Cómo saber qué solución es la adecuada para mi
                       organización?
                     </h4>
@@ -1214,7 +958,7 @@
                       <img src="./images/arrow-down-left.svg" alt="arrow-up-left" class="w-6 h-8 md:w-12 md:h-12" />
                     </div>
                     <h4
-                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium  max-w-[372px] text-white font-ClashDisplay">
+                      class="text-2xl md:text-[28px] xl:text-4xl leading-8 md:leading-9 font-medium max-w-[372px] text-white font-ClashDisplay sm:block hidden">
                       ¿Cómo saber qué solución es la adecuada para mi
                       organización?
                     </h4>
@@ -1404,8 +1148,68 @@
     <!-- copyright end -->
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <script src="./js/index.js"></script>
+  <script>
+
+    $('.sliderWrapper').slick({
+      dots: false,
+      centerMode: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      infinite: true,
+      prevArrow: '.prev',
+      swipeToSlide: true,
+      nextArrow: '.next',
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1160,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            centerMode: true,
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+    $('.frecuentes-wrapper').slick({
+      dots: false,
+      centerMode: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      infinite: true,
+      prevArrow: '.fPrev',
+      swipeToSlide: true,
+      nextArrow: '.fNext',
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1160,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            centerMode: true,
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  </script>
 </body>
 
 </html>

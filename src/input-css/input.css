@@ -246,7 +246,10 @@ select:invalid {
   padding-right: 276px !important;
   padding-left: 0 !important;
 }
-
+.sliderWrapper .slick-list.draggable {
+  padding-right: 62px !important;
+  padding-left: 0 !important;
+}
 @media (max-width: 992px) {
   .slick-wrapper .slick-list.draggable {
     padding-right: 124px !important;
@@ -255,13 +258,19 @@ select:invalid {
     padding-right: 310px !important;
     padding-left: 0 !important;
   }
+  .sliderWrapper .slick-list.draggable {
+    padding-right: 270px !important;
+  }
 }
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   .slick-wrapper .slick-list.draggable {
     padding-right: 80px !important;
   }
   .frecuentes-wrapper .slick-list.draggable {
     padding-right: 100px !important;
     padding-left: 0 !important;
+  }
+  .sliderWrapper .slick-list.draggable {
+    padding-right: 58px !important;
   }
 }

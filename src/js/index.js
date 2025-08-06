@@ -1,13 +1,13 @@
 // curent year
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
 // preloader
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  const content = document.getElementById("content");
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  const content = document.getElementById('content');
 
   // Add animation class
-  preloader.classList.add("hide-preloader");
+  preloader.classList.add('hide-preloader');
 
   // Fade in content
   // content.classList.remove('opacity-0');
@@ -15,211 +15,92 @@ window.addEventListener("load", () => {
   // Fully remove preloader after animation
   setTimeout(() => {
     preloader.remove(); // Or use: preloader.style.display = 'none';
-    document.body.classList.remove("overflow-hidden");
+    document.body.classList.remove('overflow-hidden');
   }, 800); // Match animation duration
 });
 //Header
 // Reusable Dropdown Logic
-document.addEventListener("DOMContentLoaded", function () {
-  const dropdownButtons = document.querySelectorAll("[data-dropdown]");
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownButtons = document.querySelectorAll('[data-dropdown]');
   const isTouchDevice =
-    "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
   // ✅ Hover logic (Desktop only)
   if (!isTouchDevice) {
-    dropdownButtons.forEach((button) => {
-      const parent = button.closest(".dropdown");
-      const menu = parent.querySelector(".dropdown-menu");
+    dropdownButtons.forEach(button => {
+      const parent = button.closest('.dropdown');
+      const menu = parent.querySelector('.dropdown-menu');
 
-      parent.addEventListener("mouseenter", () => {
-        parent.classList.add("showDropdown");
-        menu.classList.add("show");
+      parent.addEventListener('mouseenter', () => {
+        parent.classList.add('showDropdown');
+        menu.classList.add('show');
       });
 
-      parent.addEventListener("mouseleave", () => {
-        parent.classList.remove("showDropdown");
-        menu.classList.remove("show");
+      parent.addEventListener('mouseleave', () => {
+        parent.classList.remove('showDropdown');
+        menu.classList.remove('show');
       });
     });
   }
 
   // ✅ Click logic (Always enabled)
-  document.addEventListener("click", function (e) {
-    const isDropdownBtn = e.target.closest("[data-dropdown]");
-    const isInsideDropdown = e.target.closest(".dropdown");
-    const allMenus = document.querySelectorAll(".dropdown-menu");
-    const allDropdowns = document.querySelectorAll(".dropdown");
+  document.addEventListener('click', function (e) {
+    const isDropdownBtn = e.target.closest('[data-dropdown]');
+    const isInsideDropdown = e.target.closest('.dropdown');
+    const allMenus = document.querySelectorAll('.dropdown-menu');
+    const allDropdowns = document.querySelectorAll('.dropdown');
 
     if (isDropdownBtn) {
-      const parent = isDropdownBtn.closest(".dropdown");
-      const menu = parent.querySelector(".dropdown-menu");
+      const parent = isDropdownBtn.closest('.dropdown');
+      const menu = parent.querySelector('.dropdown-menu');
 
-      allMenus.forEach((m) => {
-        if (m !== menu) m.classList.remove("show");
+      allMenus.forEach(m => {
+        if (m !== menu) m.classList.remove('show');
       });
 
-      allDropdowns.forEach((d) => {
-        if (d !== parent) d.classList.remove("showDropdown");
+      allDropdowns.forEach(d => {
+        if (d !== parent) d.classList.remove('showDropdown');
       });
 
-      parent.classList.toggle("showDropdown");
-      menu.classList.toggle("show");
+      parent.classList.toggle('showDropdown');
+      menu.classList.toggle('show');
     } else if (!isInsideDropdown) {
-      allMenus.forEach((m) => m.classList.remove("show"));
-      allDropdowns.forEach((d) => d.classList.remove("showDropdown"));
+      allMenus.forEach(m => m.classList.remove('show'));
+      allDropdowns.forEach(d => d.classList.remove('showDropdown'));
     }
   });
 });
 
 // Mobile Menu Toggle
-const mobileToggleBtn = document.querySelector("[data-mobile-menu-toggle]");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMobileBtn = document.querySelector("[data-close-mobile]");
+const mobileToggleBtn = document.querySelector('[data-mobile-menu-toggle]');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMobileBtn = document.querySelector('[data-close-mobile]');
 
-mobileToggleBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("offcanvas-open");
+mobileToggleBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('offcanvas-open');
 });
 
-closeMobileBtn.addEventListener("click", () => {
-  mobileMenu.classList.remove("offcanvas-open");
-});
-
-// swiper slider
-
-const servicesSwiper = new Swiper(".servicesSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 12,
-  loop: true,
-  grabCursor: true,
-  mousewheel: {
-    forceToAxis: true,
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: "auto",
-    },
-    768: {
-      slidesPerView: 2.2,
-    },
-    1024: {
-      slidesPerView: 3.2,
-    },
-  },
-});
-
-//dev
-const devsswiper = new Swiper(".devSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 12,
-  loop: true,
-  grabCursor: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  navigation: {
-    nextEl: ".swiperdev-next",
-    prevEl: ".swiperdev-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: "auto",
-    },
-    768: {
-      slidesPerView: "auto",
-    },
-    1024: {
-      slidesPerView: "auto",
-    },
-    1280: {
-      slidesPerView: 2.2,
-    },
-  },
-});
-// swiper slider two
-const servicesSwiperTwo = new Swiper(".servicesSwiperTwo", {
-  slidesPerView: "auto",
-  spaceBetween: 12,
-  loop: true,
-  grabCursor: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: "auto",
-    },
-    768: {
-      slidesPerView: 2.2,
-    },
-    1024: {
-      slidesPerView: 2.3,
-    },
-    1280: {
-      slidesPerView: 3.2,
-    },
-  },
-});
-
-window.addEventListener("DOMContentLoaded", function () {
-  const frecuentesswiper = new Swiper(".frecuentesSwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 12,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    navigation: {
-      nextEl: ".frecuentes-next",
-      prevEl: ".frecuentes-prev",
-    },
-    breakpoints: {
-      640: { slidesPerView: "auto" },
-      768: { slidesPerView: "auto" },
-      1024: { slidesPerView: 2.6 },
-      1280: {
-        slidesPerView: 3.6,
-      },
-    },
-  });
+closeMobileBtn.addEventListener('click', () => {
+  mobileMenu.classList.remove('offcanvas-open');
 });
 
 // Function to match left spacing of the slider wrapper with the container
 // bg
 function setResponsiveGradient() {
-  const gradientEl = document.querySelector(".tecnologia-bg");
+  const gradientEl = document.querySelector('.tecnologia-bg');
   const width = window.innerWidth;
 
   if (!gradientEl) return;
 
   if (width < 576) {
     gradientEl.style.background =
-      "linear-gradient(180deg, #3c8b84 -20.56%, #fefefd 50.63%)";
+      'linear-gradient(180deg, #3c8b84 -20.56%, #fefefd 50.63%)';
   } else if (width < 768) {
     gradientEl.style.background =
-      "linear-gradient(180deg, #3c8b84 -50%, #fefefd 90%)";
+      'linear-gradient(180deg, #3c8b84 -50%, #fefefd 90%)';
   } else {
     gradientEl.style.background =
-      "linear-gradient(180deg, #3c8b84 -32.56%, #fefefd 82.63%)";
+      'linear-gradient(180deg, #3c8b84 -32.56%, #fefefd 82.63%)';
   }
 }
 
@@ -227,13 +108,13 @@ function setResponsiveGradient() {
 setResponsiveGradient();
 
 // Run on window resize
-window.addEventListener("resize", setResponsiveGradient);
+window.addEventListener('resize', setResponsiveGradient);
 
 // any link clickable
-document.querySelectorAll(".linkify").forEach((el) => {
-  el.style.cursor = "pointer";
-  el.addEventListener("click", () => {
-    const href = el.getAttribute("data-href");
+document.querySelectorAll('.linkify').forEach(el => {
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', () => {
+    const href = el.getAttribute('data-href');
     if (href) window.location.href = href;
   });
 });
